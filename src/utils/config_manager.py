@@ -32,7 +32,7 @@ class ConfigManager:
         "DEVICE_ID": None,
         "NETWORK": {
             "OTA_VERSION_URL": "https://api.tenclass.net/xiaozhi/ota/",
-            "WEBSOCKET_URL": "wss://api.tenclass.net/xiaozhi/v1/",
+            "WEBSOCKET_URL": 'wss://api.tenclass.net/xiaozhi/v1/',
             "WEBSOCKET_ACCESS_TOKEN": "test-token",
         },
         "MQTT_INFO": None

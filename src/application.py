@@ -13,6 +13,7 @@ from src.constants.constants import DeviceState, EventType, AudioConfig, AbortRe
 from src.display import gui_display, cli_dispaly
 from src.protocols.websocket_protocol import WebsocketProtocol
 from src.utils.config_manager import ConfigManager
+from src.utils.Camera import CameraManager
 
 # 配置日志
 logger = logging.getLogger("Application")
@@ -82,6 +83,9 @@ class Application:
 
         # 获取配置管理器实例
         self.config = ConfigManager.get_instance()
+
+        # 摄像头控制器
+        self.camera = CameraManager.get_instance()
 
     def run(self, **kwargs):
         """启动应用程序"""
@@ -279,7 +283,7 @@ class Application:
         """处理音频输出"""
         if self.device_state != DeviceState.SPEAKING:
             return
-        
+
         try:
             # 检查输出流状态
             if not self.output_stream or not self.output_stream.is_active():
@@ -291,7 +295,7 @@ class Application:
                     except Exception as e:
                         logger.error(f"重新启动音频输出流失败: {e}")
                         return
-            
+
             # 批量处理多个音频包以减少处理延迟
             batch_size = min(10, self.audio_decode_queue.qsize())
             if batch_size == 0:
@@ -353,7 +357,7 @@ class Application:
                     self.output_stream.close()
                 except Exception as e:
                     logger.warning(f"关闭现有输出流时出错: {e}")
-            
+
             # 创建新的输出流
             self.output_stream = self.audio.open(
                 format=pyaudio.paInt16,
@@ -362,7 +366,7 @@ class Application:
                 output=True,
                 frames_per_buffer=AudioConfig.FRAME_SIZE
             )
-            
+
             logger.info("音频输出流重新初始化成功")
         except Exception as e:
             logger.error(f"重新初始化音频输出流失败: {e}")
@@ -444,7 +448,6 @@ class Application:
                 data = json.loads(json_data)
             else:
                 data = json_data
-
             # 处理不同类型的消息
             msg_type = data.get("type", "")
             if msg_type == "tts":
@@ -525,12 +528,20 @@ class Application:
         """处理STT消息"""
         text = data.get("text", "")
         if text:
+            print("当前text:" + text)  # "当前text：打开摄像头啊"
             logger.info(f">> {text}")
             self.schedule(lambda: self.set_chat_message("user", text))
-
+        if '打开摄像头' in text or '摄像头' in text:
+            print('开始打开摄像头')
+            self.camera.start_camera()
+        if '识别'in text or '识别图片' in text or '拍照' in text:
+            print('识别图片')
+            msgs=self.camera.capture_frame_to_base64_to_json()
+            asyncio.run_coroutine_threadsafe(self.protocol.send_text(msgs), self.loop)
     def _handle_llm_message(self, data):
         """处理LLM消息"""
         emotion = data.get("emotion", "")
+        text = data.get("text", "")
         if emotion:
             self.schedule(lambda: self.set_emotion(emotion))
 
@@ -934,7 +945,7 @@ class Application:
                     self.input_stream.close()
                 except Exception as e:
                     logger.warning(f"关闭现有输入流时出错: {e}")
-            
+
             # 创建新的输入流
             self.input_stream = self.audio.open(
                 format=pyaudio.paInt16,
@@ -943,7 +954,7 @@ class Application:
                 input=True,
                 frames_per_buffer=AudioConfig.FRAME_SIZE
             )
-            
+
             logger.info("音频输入流重新初始化成功")
         except Exception as e:
             logger.error(f"重新初始化音频输入流失败: {e}")

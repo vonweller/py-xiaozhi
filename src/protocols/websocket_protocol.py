@@ -2,7 +2,7 @@ import asyncio
 import json
 import logging
 import websockets
-
+import  base64
 
 from src.protocols.protocol import Protocol
 from src.utils.config_manager import ConfigManager
@@ -54,6 +54,7 @@ class WebsocketProtocol(Protocol):
                     "frame_duration": 60
                 }
             }
+           # await self.send_text(json.dumps(vl_message))
             await self.send_text(json.dumps(hello_message))
 
             # 等待服务器hello响应
@@ -78,9 +79,7 @@ class WebsocketProtocol(Protocol):
         """处理接收到的WebSocket消息"""
         try:
             async for message in self.websocket:
-
                 if isinstance(message, str):
-
                     try:
                         data = json.loads(message)
                         msg_type = data.get("type")
@@ -106,6 +105,11 @@ class WebsocketProtocol(Protocol):
             self.connected = False
             if self.on_network_error:
                 self.on_network_error(f"连接错误: {str(e)}")
+
+    # base64图片压缩
+    def compress_image(self, image_path):
+        with open(image_path, 'rb') as image_:
+            return base64.b64encode(image_.read()).decode('utf-8')
 
     async def send_audio(self, data: bytes):
         """发送音频数据"""
