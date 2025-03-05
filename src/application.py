@@ -541,7 +541,6 @@ class Application:
     def _handle_llm_message(self, data):
         """处理LLM消息"""
         emotion = data.get("emotion", "")
-        text = data.get("text", "")
         if emotion:
             self.schedule(lambda: self.set_emotion(emotion))
 
