@@ -528,16 +528,15 @@ class Application:
         """处理STT消息"""
         text = data.get("text", "")
         if text:
-            print("当前text:" + text)  # "当前text：打开摄像头啊"
             logger.info(f">> {text}")
             self.schedule(lambda: self.set_chat_message("user", text))
         if '打开摄像头' in text or '摄像头' in text:
-            print('开始打开摄像头')
+            #print('开始打开摄像头')
             self.camera.start_camera()
         if '识别'in text or '识别图片' in text or '拍照' in text:
-            print('识别图片')
+            #print('识别图片')
             msgs=self.camera.capture_frame_to_base64_to_json()
-            asyncio.run_coroutine_threadsafe(self.protocol.send_text(msgs), self.loop)
+            asyncio.run_coroutine_threadsafe(self.protocol.send_image(msgs), self.loop)
     def _handle_llm_message(self, data):
         """处理LLM消息"""
         emotion = data.get("emotion", "")

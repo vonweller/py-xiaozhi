@@ -121,6 +121,16 @@ class WebsocketProtocol(Protocol):
                 if self.on_network_error:
                     self.on_network_error(f"发送音频失败: {str(e)}")
 
+    async def send_image(self, capture_frame_to_base64_to_json: str):
+        """发送文本消息"""
+        if self.websocket:
+            try:
+                await self.websocket.send(capture_frame_to_base64_to_json)
+            except Exception as e:
+                logger.error(f"发送文本消息失败: {e}")
+                if self.on_network_error:
+                    self.on_network_error(f"发送消息失败: {str(e)}")
+
     async def send_text(self, message: str):
         """发送文本消息"""
         if self.websocket:
