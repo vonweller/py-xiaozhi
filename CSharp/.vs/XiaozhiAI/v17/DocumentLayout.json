@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\DO\\Githubs\\PyxiaozhiVL\\XiaozhiAI\u5BA2\u6237\u7AEF\\xiaozhiM10\\CSharp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{78CA7A6A-F8F5-A292-9848-E9E22ABBBC1F}|XiaozhiAI.csproj|f:\\do\\githubs\\pyxiaozhivl\\xiaozhiai\u5BA2\u6237\u7AEF\\xiaozhim10\\csharp\\models\\iot\\things\\lamp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78CA7A6A-F8F5-A292-9848-E9E22ABBBC1F}|XiaozhiAI.csproj|solutionrelative:models\\iot\\things\\lamp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78CA7A6A-F8F5-A292-9848-E9E22ABBBC1F}|XiaozhiAI.csproj|f:\\do\\githubs\\pyxiaozhivl\\xiaozhiai\u5BA2\u6237\u7AEF\\xiaozhim10\\csharp\\models\\iot\\things\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78CA7A6A-F8F5-A292-9848-E9E22ABBBC1F}|XiaozhiAI.csproj|solutionrelative:models\\iot\\things\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78CA7A6A-F8F5-A292-9848-E9E22ABBBC1F}|XiaozhiAI.csproj|f:\\do\\githubs\\pyxiaozhivl\\xiaozhiai\u5BA2\u6237\u7AEF\\xiaozhim10\\csharp\\models\\iot\\thingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78CA7A6A-F8F5-A292-9848-E9E22ABBBC1F}|XiaozhiAI.csproj|solutionrelative:models\\iot\\thingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78CA7A6A-F8F5-A292-9848-E9E22ABBBC1F}|XiaozhiAI.csproj|f:\\do\\githubs\\pyxiaozhivl\\xiaozhiai\u5BA2\u6237\u7AEF\\xiaozhim10\\csharp\\services\\voiceassistant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78CA7A6A-F8F5-A292-9848-E9E22ABBBC1F}|XiaozhiAI.csproj|solutionrelative:services\\voiceassistant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78CA7A6A-F8F5-A292-9848-E9E22ABBBC1F}|XiaozhiAI.csproj|f:\\do\\githubs\\pyxiaozhivl\\xiaozhiai\u5BA2\u6237\u7AEF\\xiaozhim10\\csharp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78CA7A6A-F8F5-A292-9848-E9E22ABBBC1F}|XiaozhiAI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Lamp.cs",
+              "DocumentMoniker": "F:\\DO\\Githubs\\PyxiaozhiVL\\XiaozhiAI\u5BA2\u6237\u7AEF\\xiaozhiM10\\CSharp\\Models\\IoT\\Things\\Lamp.cs",
+              "RelativeDocumentMoniker": "Models\\IoT\\Things\\Lamp.cs",
+              "ToolTip": "F:\\DO\\Githubs\\PyxiaozhiVL\\XiaozhiAI\u5BA2\u6237\u7AEF\\xiaozhiM10\\CSharp\\Models\\IoT\\Things\\Lamp.cs",
+              "RelativeToolTip": "Models\\IoT\\Things\\Lamp.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAA1wC8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T16:06:24.401Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Camera.cs",
+              "DocumentMoniker": "F:\\DO\\Githubs\\PyxiaozhiVL\\XiaozhiAI\u5BA2\u6237\u7AEF\\xiaozhiM10\\CSharp\\Models\\IoT\\Things\\Camera.cs",
+              "RelativeDocumentMoniker": "Models\\IoT\\Things\\Camera.cs",
+              "ToolTip": "F:\\DO\\Githubs\\PyxiaozhiVL\\XiaozhiAI\u5BA2\u6237\u7AEF\\xiaozhiM10\\CSharp\\Models\\IoT\\Things\\Camera.cs",
+              "RelativeToolTip": "Models\\IoT\\Things\\Camera.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T16:04:29.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ThingManager.cs",
+              "DocumentMoniker": "F:\\DO\\Githubs\\PyxiaozhiVL\\XiaozhiAI\u5BA2\u6237\u7AEF\\xiaozhiM10\\CSharp\\Models\\IoT\\ThingManager.cs",
+              "RelativeDocumentMoniker": "Models\\IoT\\ThingManager.cs",
+              "ToolTip": "F:\\DO\\Githubs\\PyxiaozhiVL\\XiaozhiAI\u5BA2\u6237\u7AEF\\xiaozhiM10\\CSharp\\Models\\IoT\\ThingManager.cs",
+              "RelativeToolTip": "Models\\IoT\\ThingManager.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAEwDEAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T15:55:32.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "VoiceAssistant.cs",
+              "DocumentMoniker": "F:\\DO\\Githubs\\PyxiaozhiVL\\XiaozhiAI\u5BA2\u6237\u7AEF\\xiaozhiM10\\CSharp\\Services\\VoiceAssistant.cs",
+              "RelativeDocumentMoniker": "Services\\VoiceAssistant.cs",
+              "ToolTip": "F:\\DO\\Githubs\\PyxiaozhiVL\\XiaozhiAI\u5BA2\u6237\u7AEF\\xiaozhiM10\\CSharp\\Services\\VoiceAssistant.cs",
+              "RelativeToolTip": "Services\\VoiceAssistant.cs",
+              "ViewState": "AgIAAOkAAAAAAAAAAAArwPoAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T15:44:09.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\DO\\Githubs\\PyxiaozhiVL\\XiaozhiAI\u5BA2\u6237\u7AEF\\xiaozhiM10\\CSharp\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "F:\\DO\\Githubs\\PyxiaozhiVL\\XiaozhiAI\u5BA2\u6237\u7AEF\\xiaozhiM10\\CSharp\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAmwEYAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T14:50:41.992Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
